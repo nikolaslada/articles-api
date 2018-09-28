@@ -9,8 +9,8 @@ class CreateAuthorsTable extends Migration
     public function up(): void
     {
         Schema::create('authors', function (Blueprint $table) {
-              $table->increments('id');
-              $table->string('name')->unique();
+              $table->mediumIncrements('id')->unsigned();
+              $table->string('name');
               $table->timestamps();
               $table->softDeletes();
         });
